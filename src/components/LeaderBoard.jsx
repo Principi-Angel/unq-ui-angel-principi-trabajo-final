@@ -2,7 +2,7 @@ import { getTopScores } from "../helpers/ScoreManager";
 import BackToMenuButton from "./BackToMenuButton.jsx";
 
 const Leaderboard = () => {
-  const scores = getTopScores(5); 
+  const scores = getTopScores(); 
 
   return (
     <div className="leaderboard">
