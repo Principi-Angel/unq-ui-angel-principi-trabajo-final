@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 
-const Home = () => (
+const Menu = () => (
   <div className="home">
     <h1>Palabras Encadenadas</h1>
     <p>Bienvenido al juego</p>
@@ -13,4 +13,4 @@ const Home = () => (
   </div>
 );
 
-export default Home;
+export default Menu;
