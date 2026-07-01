@@ -1,6 +1,13 @@
+import { useEffect } from "react";
+import { initScores } from "../services/StorageService";
 import { Link } from "react-router-dom";
 
-const Menu = () => (
+const Menu = () => {
+  useEffect(() => {
+    initScores();
+  }, []);
+
+return (
   <div className="home">
     <h1>Palabras Encadenadas</h1>
     <p>Bienvenido al juego</p>
@@ -11,6 +18,7 @@ const Menu = () => (
       <button>Ver Puntajes</button>
     </Link>
   </div>
-);
+); 
+};
 
 export default Menu;
