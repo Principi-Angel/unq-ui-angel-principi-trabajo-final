@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import WordInput from "./WordInput.jsx";
 import WordChain from "./WordChain.jsx";
 import Timer from "./Timer.jsx";
+import GameOverModal from "./GameOverModal.jsx";
 //import "../styles/components/GameBoard.css"
 import "../styles/game.css"
 const GameBoard = () => {
@@ -23,21 +24,32 @@ const GameBoard = () => {
         return () => clearInterval(interval);
     }, [timeLeft, gameOver]);
     
+    const handleRestart = () => {
+      setChain([]);
+      setWord("");
+      setScore(0);
+      setTimeLeft(null);
+      setGameOver(false);
+    };
+
+    const handleSaveScore = (name, score, wordsCount) => {
+      const scores = JSON.parse(localStorage.getItem("scores")) || [];
+      scores.push({ name, score, wordsCount });
+      localStorage.setItem("scores", JSON.stringify(scores));
+    };
+
+    
+
     if (gameOver) {
     return (
       <div className="game-over-screen">
-        <h1>Fin de la partida</h1>
-        <p>Puntaje final: {score}</p>
-        <button onClick={() => {
-          // reinicio partida
-          setChain([]);
-          setWord("");
-          setScore(0);
-          setTimeLeft(null);
-          setGameOver(false);
-        }}>
-          Jugar de nuevo
-        </button>
+       <GameOverModal 
+          score={score} 
+          wordsCount={chain.length} 
+          onRestart={handleRestart} 
+          onSaveScore={handleSaveScore}
+        />
+
       </div>
     );
   }
