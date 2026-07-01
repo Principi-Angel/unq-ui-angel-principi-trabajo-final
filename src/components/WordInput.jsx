@@ -14,36 +14,47 @@ const WordInput = ({ word, setWord, chain, setChain, score, setScore, setTimeLef
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    const exists = await validateWord(word); 
-
-    if (!exists) {
-      setError("La palabra no existe.");
-      setWord("");
-      // que se ponga algo rojo
-      return;
-    }
-
-    if (chain.includes(word)) {
-      setError("La palabra ya fue utilizada.");
+    if(!word.trim()) {
+      setError("¿Estás en blanco?");
       setWord("");
       return;
     }
 
-    if (chain.length > 0) {
-      const lastWord = chain[chain.length - 1];
-      if (word[0].toLowerCase() !== lastWord[lastWord.length - 1].toLowerCase()) {
+    try {
+        const exists = await validateWord(word); 
+
+        if (!exists) {
+          setError("No existe.");
+          setWord("");
+          // que se ponga algo rojo
+          return;
+        }
+      
+        if (chain.includes(word)) {
+          setError("Ya la usaste.");
+          setWord("");
+          return;
+        }
+      
+        if (chain.length > 0) {
+          const lastWord = chain[chain.length - 1];
+          if (word[0].toLowerCase() !== lastWord[lastWord.length - 1].toLowerCase()) {
+            setWord("");
+            setError("Hay una sola regla...")
+            // que se ponga algo rojo
+            return;
+          }
+        }
+      
+        setChain([...chain, word]);
+        setScore(score + word.length);
+        setTimeLeft(15);
         setWord("");
-        setError("No respeta cadena.")
-        // que se ponga algo rojo
-        return;
+        setError("")
+      } catch (error) {
+        setError("Error al validar la palabra. Intenta nuevamente.")
+        setTimeLeft(15);
       }
-    }
-
-    setChain([...chain, word]);
-    setScore(score + word.length);
-    setTimeLeft(15);
-    setWord("");
-    setError("")
   };
 
   return (
