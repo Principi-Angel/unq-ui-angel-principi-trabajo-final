@@ -30,6 +30,8 @@ const GameOverModal = ({ score, wordsCount, onRestart, onSaveScore }) => {
 
         {isHighScore(score) ? (
           <>
+            <p>¡Hiciste un record!</p>
+            <p>Podes publicarlo, poniendo tu nombre acá abajo</p>
             <input
               type="text"
               placeholder="Ingresa tu nombre"
