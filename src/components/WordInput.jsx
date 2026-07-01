@@ -17,13 +17,14 @@ const WordInput = ({ word, setWord, chain, setChain, score, setScore, setTimeLef
     const exists = await validateWord(word); 
 
     if (!exists) {
+      setError("La palabra no existe.");
       setWord("");
       // que se ponga algo rojo
       return;
     }
 
     if (chain.includes(word)) {
-      setError("La palabra ya fue utilizada");
+      setError("La palabra ya fue utilizada.");
       setWord("");
       return;
     }
@@ -32,7 +33,7 @@ const WordInput = ({ word, setWord, chain, setChain, score, setScore, setTimeLef
       const lastWord = chain[chain.length - 1];
       if (word[0].toLowerCase() !== lastWord[lastWord.length - 1].toLowerCase()) {
         setWord("");
-        setError("¡RESPETÁ LAS REGLAS GIL!")
+        setError("No respeta cadena.")
         // que se ponga algo rojo
         return;
       }
