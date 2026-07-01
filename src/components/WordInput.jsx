@@ -5,75 +5,81 @@ import "../styles/game.css"
 
 const WordInput = ({ word, setWord, chain, setChain, score, setScore, setTimeLeft }) => {
     const [error, setError] = useState(""); 
+    const [firstEmptyAttempt, setFirstEmptyAttempt] = useState(true); 
 
-  const handleChange = (e) => {
-    setWord(e.target.value);
-    setError(""); 
-  };
+    const handleChange = (e) => {
+      setWord(e.target.value);
+      setError(""); 
+    };
 
-  const handleSubmit = async (e) => {
-    e.preventDefault();
+    const handleSubmit = async (e) => {
+      e.preventDefault();
 
-    if(!word.trim()) {
-      setError("¿Estás en blanco?");
-      setWord("");
-      return;
-    }
+      if (!word.trim()) {
+          if (firstEmptyAttempt) { // o tal vez en disabled del botón, todo
+            setError("¿Ansiedad? No escribiste nada todavía.");
+            setFirstEmptyAttempt(false); 
+          } else {
+            setError("¿Estás en blanco?");
+          }
+          setWord("");
+          return;
+      }
 
-    try {
+      try {
         const exists = await validateWord(word); 
 
-        if (!exists) {
-          setError("No existe.");
-          setWord("");
-          // que se ponga algo rojo
-          return;
-        }
-      
-        if (chain.includes(word)) {
-          setError("Ya la usaste.");
-          setWord("");
-          return;
-        }
-      
-        if (chain.length > 0) {
-          const lastWord = chain[chain.length - 1];
-          if (word[0].toLowerCase() !== lastWord[lastWord.length - 1].toLowerCase()) {
+          if (!exists) {
+            setError("No existe.");
             setWord("");
-            setError("Hay una sola regla...")
             // que se ponga algo rojo
             return;
           }
-        }
-      
-        setChain([...chain, word]);
-        setScore(score + word.length);
-        setTimeLeft(15);
-        setWord("");
-        setError("")
-      } catch (error) {
-        setError("Error al validar la palabra. Intenta nuevamente.")
-        setTimeLeft(15);
-      }
-  };
-
-  return (
-    <form onSubmit={handleSubmit}>
-      <input
-        type="text"
-        value={word}
-        onChange={handleChange}
-        onKeyDown={(e) => {
-          if (e.key === " " || e.key === "Enter") {
-            e.preventDefault();
-            handleSubmit(e);
+        
+          if (chain.includes(word)) {
+            setError("Ya la usaste.");
+            setWord("");
+            return;
           }
-        }}
-      />
-      {error && <p className="error-message">{error}</p>}
-      <button type="submit">Ingresar</button>
-    </form>
-  );
+        
+          if (chain.length > 0) {
+            const lastWord = chain[chain.length - 1];
+            if (word[0].toLowerCase() !== lastWord[lastWord.length - 1].toLowerCase()) {
+              setWord("");
+              setError("Hay una sola regla...")
+              // que se ponga algo rojo
+              return;
+            }
+          }
+        
+          setChain([...chain, word]);
+          setScore(score + word.length);
+          setTimeLeft(15);
+          setWord("");
+          setError("")
+        } catch (error) {
+          setError("Error al validar la palabra. Intenta nuevamente.")
+          setTimeLeft(15);
+        }
+    };
+
+    return (
+        <form onSubmit={handleSubmit}>
+          <input
+            type="text"
+            value={word}
+            onChange={handleChange}
+            onKeyDown={(e) => {
+              if (e.key === " " || e.key === "Enter") {
+                e.preventDefault();
+                handleSubmit(e);
+              }
+            }}
+          />
+          {error && <p className="error-message">{error}</p>}
+          <button type="submit">Ingresar</button>
+        </form>
+    );
 };
 
 export default WordInput;
