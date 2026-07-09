@@ -1,5 +1,6 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { validateWord } from "../services/ApiService.jsx";
+import { normalizeWord } from "../helpers/constants.jsx";
 //import "../styles/components/WordInput.css"
 import "../styles/game.css"
 
@@ -14,6 +15,8 @@ const WordInput = ({ word, setWord, chain, setChain, score, setScore, setTimeLef
 
     const handleSubmit = async (e) => {
       e.preventDefault();
+
+      const normalized = normalizeWord(word);
 
       if (!word.trim()) {
           if (firstEmptyAttempt) { // o tal vez en disabled del botón, todo
@@ -36,7 +39,7 @@ const WordInput = ({ word, setWord, chain, setChain, score, setScore, setTimeLef
             return;
           }
         
-          if (chain.includes(word)) {
+          if (chain.some(item => item.normalized === normalized)) {
             setError("Ya la usaste.");
             setWord("");
             return;
@@ -44,7 +47,7 @@ const WordInput = ({ word, setWord, chain, setChain, score, setScore, setTimeLef
         
           if (chain.length > 0) {
             const lastWord = chain[chain.length - 1];
-            if (word[0].toLowerCase() !== lastWord[lastWord.length - 1].toLowerCase()) {
+            if (normalized[0] !== lastWord.normalized.slice(-1)) {
               setWord("");
               setError("Hay una sola regla...")
               // que se ponga algo rojo
@@ -52,7 +55,7 @@ const WordInput = ({ word, setWord, chain, setChain, score, setScore, setTimeLef
             }
           }
         
-          setChain([...chain, word]);
+          setChain([...chain, { original: word, normalized }]);
           setScore(score + word.length);
           setTimeLeft(15);
           setWord("");
