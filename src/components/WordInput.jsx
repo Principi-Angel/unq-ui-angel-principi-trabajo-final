@@ -4,7 +4,7 @@ import { normalizeWord } from "../helpers/constants.jsx";
 //import "../styles/components/WordInput.css"
 import "../styles/game.css"
 
-const WordInput = ({ word, setWord, chain, setChain, score, setScore, setTimeLeft }) => {
+const WordInput = ({ word, setWord, chain, setChain, score, setScore, setTimeLeft, isValidating, setIsValidating }) => {
     const [error, setError] = useState(""); 
     const [firstEmptyAttempt, setFirstEmptyAttempt] = useState(true); 
 
@@ -29,6 +29,8 @@ const WordInput = ({ word, setWord, chain, setChain, score, setScore, setTimeLef
           return;
       }
 
+      setIsValidating(true);
+
       try {
         const exists = await validateWord(word); 
 
@@ -40,7 +42,7 @@ const WordInput = ({ word, setWord, chain, setChain, score, setScore, setTimeLef
           }
         
           if (chain.some(item => item.normalized === normalized)) {
-            setError("Ya la usaste.");
+            setError("Ya la usaste."); // que la palabra se resalte en la cadena
             setWord("");
             return;
           }
@@ -63,6 +65,8 @@ const WordInput = ({ word, setWord, chain, setChain, score, setScore, setTimeLef
         } catch (error) {
           setError("Error al validar la palabra. Intenta nuevamente.")
           setTimeLeft(15);
+        } finally {
+          setIsValidating(false);
         }
     };
 
@@ -80,7 +84,9 @@ const WordInput = ({ word, setWord, chain, setChain, score, setScore, setTimeLef
             }}
           />
           {error && <p className="error-message">{error}</p>}
-          <button type="submit">Ingresar</button>
+          <button type="submit" disabled={isValidating}>
+            {isValidating ? "Validando..." : "Ingresar"}
+          </button>
         </form>
     );
 };

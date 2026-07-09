@@ -11,6 +11,7 @@ const GameBoard = () => {
     const [score, setScore] = useState(0);
     const [timeLeft, setTimeLeft] = useState(null);
     const [gameOver, setGameOver] = useState(false);
+    const [isValidating, setIsValidating] = useState(false);
 
     useEffect(() => {
         if (timeLeft === null) return;
@@ -18,11 +19,14 @@ const GameBoard = () => {
           setGameOver(true);
           return;
         }
+
+        if (isValidating) return; 
+
         const interval = setInterval(() => {
           setTimeLeft((prev) => prev - 1);
         }, 1000);
         return () => clearInterval(interval);
-    }, [timeLeft, gameOver]);
+    }, [timeLeft, gameOver, isValidating]);
     
     const handleRestart = () => {
       setChain([]);
@@ -68,6 +72,8 @@ const GameBoard = () => {
         score={score}
         setScore={setScore}
         setTimeLeft={setTimeLeft}
+        isValidating={isValidating}
+        setIsValidating={setIsValidating}
       />
       <WordChain
         chain={chain}
