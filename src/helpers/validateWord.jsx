@@ -14,20 +14,18 @@ export async function validateWord(word, chain) {
         return { isValid: false, error: "La palabra no existe." };
       }
     
-      const alreadyUsed = chain.some(
-         w => normalizeWord(w) === normalized
-      );
+      const alreadyUsed = chain.some(w => w.normalized === normalized);
     
       if (alreadyUsed) {
         return { isValid: false, error: "La palabra ya fue utilizada." };
       }
     
       if (chain.length > 0) {
-        const lastWord = normalizeWord(chain.at(-1));
+        const lastWord = chain.at(-1).normalized;
         if (normalized[0] !== lastWord.at(-1)) {
           return { isValid: false, error: "La palabra no respeta la cadena." };
         }
       }
     
-      return { isValid: true, word: normalized };
+      return { isValid: true, word: { original: word, normalized } };
 }
