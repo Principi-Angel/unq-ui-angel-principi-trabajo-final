@@ -15,7 +15,7 @@ export function useGame() {
     function resetGame() {
         setChain([]);
         setScore(0);
-        setTimeLeft(15);
+        setTimeLeft(null);
         setGameOver(false);
     }
 
