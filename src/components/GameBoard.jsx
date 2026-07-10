@@ -3,6 +3,7 @@ import WordInput from "./WordInput.jsx";
 import WordChain from "./WordChain.jsx";
 import Timer from "./Timer.jsx";
 import GameOverModal from "./GameOverModal.jsx";
+import ScoreBoard from "./ScoreBoard.jsx"
 import { saveScore } from "../helpers/ScoreManager.jsx";
 import { useGame } from "../hooks/useGame.jsx";
 import { useTimer } from "../hooks/useTimer";
@@ -59,7 +60,11 @@ const GameBoard = () => {
                 <WordChain
                   chain={chain}
                 />
-                <p>Puntaje: {score}</p>
+                
+                <ScoreBoard
+                  score={score} 
+                  wordsCount={chain.length} 
+                />
               </div>
           );
 };
