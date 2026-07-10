@@ -6,9 +6,9 @@ const WordChain = ({ chain }) => {
     <div className="word-chain">
       <h2>Cadena de palabras</h2>
       <ul>
-        {[...chain].reverse().map((item, i) => (
-          <li key={i}>{item.original}</li>
-        ))}
+          {[...chain].reverse().map((word, i) => (
+              <li key={i}>{word}</li>
+          ))}
       </ul>
     </div>
   );

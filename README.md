@@ -10,6 +10,7 @@ El proyecto está desarollado en JavaScript y está creado con React y consume u
 - Temporizador de 15 segundos por turno.
 - Leaderboard local con los mejores puntajes.
 - Interfaz intuitiva y responsive.
+- Nota: por cuestiones de simplicidad, todas las palabras se normalizan. Esto significa que las variantes con mayúsculas,   minúsculas o acentos diacríticos (ej: "árbol", "Árbol", "arbol", "ärbol") se consideran una única palabra.
 
 ## ![Alt]([text](https://iconos8.es/icon/20544/tools)) Tecnologías
 - React + Vite
