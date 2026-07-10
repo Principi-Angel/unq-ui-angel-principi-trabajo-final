@@ -1,10 +1,7 @@
-import { useEffect } from "react";
-import { initScores } from "../helpers/ScoreManager.jsx";
 import { Link } from "react-router-dom";
 
 const Menu = () => {
   
-
 return (
   <div className="home">
     <h1>Palabras Encadenadas</h1>

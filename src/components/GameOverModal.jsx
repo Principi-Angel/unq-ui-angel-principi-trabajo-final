@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import "../styles/components/GameOverModal.css";
 import { useNavigate } from "react-router-dom";
 import { isHighScore } from "../helpers/ScoreManager";
@@ -6,7 +6,6 @@ import BackToMenuButton from "./BackToMenuButton.jsx";
 
 const GameOverModal = ({ score, wordsCount, onRestart, onSaveScore }) => {
   const [playerName, setPlayerName] = useState("");
-  const [returnToHome, setReturnToHome] = useState(false);
   const navigate = useNavigate();
 
   const handleSave = () => {
@@ -15,9 +14,6 @@ const GameOverModal = ({ score, wordsCount, onRestart, onSaveScore }) => {
     setPlayerName("");
     navigate("/scores")
   };
-  useEffect(() => {
-    console.info("isHighScore", isHighScore(score));
-  }, []);
 
  const handleMenu = () => { navigate("/"); }; 
 

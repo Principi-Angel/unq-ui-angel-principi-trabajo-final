@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import WordInput from "./WordInput.jsx";
 import WordChain from "./WordChain.jsx";
 import Timer from "./Timer.jsx";
