@@ -5,6 +5,8 @@ import Timer from "./Timer.jsx";
 import GameOverModal from "./GameOverModal.jsx";
 import { saveScore } from "../helpers/ScoreManager.jsx";
 import { useGame } from "../hooks/useGame.jsx";
+import { useTimer } from "../hooks/useTimer";
+
 //import "../styles/components/GameBoard.css"
 import "../styles/game.css"
 const GameBoard = () => {
@@ -20,6 +22,8 @@ const GameBoard = () => {
     } = useGame();
     const [isValidating, setIsValidating] = useState(false);
 
+    useTimer({ timeLeft, isValidating, tick, endGame });
+    
     const handleRestart = () => {
       resetGame()
     };
@@ -45,9 +49,6 @@ const GameBoard = () => {
                 <h1>Palabras Encadenadas</h1>
                 <Timer
                   timeLeft={timeLeft}
-                  tick={tick}
-                  endGame={endGame}
-                  isValidating={isValidating}
                 />
                 <WordInput
                   chain={chain}
