@@ -1,10 +1,11 @@
 import { useState } from "react";
-import { validateWord } from "../services/ApiService.jsx";
+import { validateWord } from "../services/apiService.jsx";
 import { normalizeWord } from "../helpers/constants.jsx";
 //import "../styles/components/WordInput.css"
 import "../styles/game.css"
 
-const WordInput = ({ word, setWord, chain, setChain, score, setScore, setTimeLeft, isValidating, setIsValidating }) => {
+const WordInput = ({ chain, setChain, score, setScore, setTimeLeft, isValidating, setIsValidating }) => {
+    const [word, setWord] = useState("");
     const [error, setError] = useState(""); 
     const [firstEmptyAttempt, setFirstEmptyAttempt] = useState(true); 
 
@@ -36,14 +37,12 @@ const WordInput = ({ word, setWord, chain, setChain, score, setScore, setTimeLef
 
           if (!exists) {
             setError("No existe.");
-            setWord("");
             // que se ponga algo rojo
             return;
           }
         
           if (chain.some(item => item.normalized === normalized)) {
             setError("Ya la usaste."); // que la palabra se resalte en la cadena
-            setWord("");
             return;
           }
         

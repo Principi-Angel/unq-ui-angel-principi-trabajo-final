@@ -7,7 +7,7 @@ import BackToMenuButton from "./BackToMenuButton.jsx";
 const GameOverModal = ({ score, wordsCount, onRestart, onSaveScore }) => {
   const [playerName, setPlayerName] = useState("");
   const [returnToHome, setReturnToHome] = useState(false);
-  let navigate = useNavigate();
+  const navigate = useNavigate();
 
   const handleSave = () => {
     if (!playerName.trim()) return;
