@@ -2,6 +2,7 @@ import { useState } from "react";
 import "../styles/components/GameOverModal.css";
 import { useNavigate } from "react-router-dom";
 import { isHighScore } from "../helpers/ScoreManager";
+import ScoreBoard from "./ScoreBoard.jsx"
 import BackToMenuButton from "./BackToMenuButton.jsx";
 
 const GameOverModal = ({ score, wordsCount, onRestart, onSaveScore }) => {
@@ -21,9 +22,11 @@ const GameOverModal = ({ score, wordsCount, onRestart, onSaveScore }) => {
     <div className="modal-overlay">
       <div className="game-over-modal">
         <h1>Fin de la partida</h1>
-        <p>Puntaje final: {score}</p>
-        <p>Cantidad de palabras: {wordsCount}</p>
-
+        <ScoreBoard
+           score={score}
+           wordsCount={wordsCount}
+           final={true}
+        />
         {isHighScore(score) ? (
           <>
             <p>¡Hiciste un record!</p>
