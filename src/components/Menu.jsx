@@ -1,11 +1,9 @@
 import { useEffect } from "react";
-import { initScores } from "../services/StorageService";
+import { initScores } from "../helpers/ScoreManager.jsx";
 import { Link } from "react-router-dom";
 
 const Menu = () => {
-  useEffect(() => {
-    initScores();
-  }, []);
+  
 
 return (
   <div className="home">
