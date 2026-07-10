@@ -8,7 +8,7 @@ export function useGame() {
 
     function addWord(word) {
         setChain(prev => [...prev, word]);
-        setScore(prev => prev + word.length);
+        setScore(prev => prev + word.original.length);
         setTimeLeft(15);
     }
 
