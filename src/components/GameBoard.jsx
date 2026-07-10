@@ -4,35 +4,24 @@ import WordChain from "./WordChain.jsx";
 import Timer from "./Timer.jsx";
 import GameOverModal from "./GameOverModal.jsx";
 import { saveScore } from "../helpers/ScoreManager.jsx";
+import { useGame } from "../hooks/useGame.jsx";
 //import "../styles/components/GameBoard.css"
 import "../styles/game.css"
 const GameBoard = () => {
-    const [chain, setChain] = useState([]);
-    const [score, setScore] = useState(0);
-    const [timeLeft, setTimeLeft] = useState(null);
-    const [gameOver, setGameOver] = useState(false);
+    const {
+        chain,
+        score,
+        timeLeft,
+        tick,
+        gameOver,
+        addWord,
+        resetGame,
+        endGame
+    } = useGame();
     const [isValidating, setIsValidating] = useState(false);
 
-    useEffect(() => {
-        if (timeLeft === null) return;
-        if (timeLeft <= 0) {
-          setGameOver(true);
-          return;
-        }
-
-        if (isValidating) return; 
-
-        const interval = setInterval(() => {
-          setTimeLeft((prev) => prev - 1);
-        }, 1000);
-        return () => clearInterval(interval);
-    }, [timeLeft, gameOver, isValidating]);
-    
     const handleRestart = () => {
-      setChain([]);
-      setScore(0);
-      setTimeLeft(null);
-      setGameOver(false);
+      resetGame()
     };
 
     const handleSaveScore = (name, score, wordsCount) => {
@@ -56,13 +45,13 @@ const GameBoard = () => {
                 <h1>Palabras Encadenadas</h1>
                 <Timer
                   timeLeft={timeLeft}
+                  tick={tick}
+                  endGame={endGame}
+                  isValidating={isValidating}
                 />
                 <WordInput
                   chain={chain}
-                  setChain={setChain}
-                  score={score}
-                  setScore={setScore}
-                  setTimeLeft={setTimeLeft}
+                  addWord={addWord}
                   isValidating={isValidating}
                   setIsValidating={setIsValidating}
                 />
