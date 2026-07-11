@@ -1,15 +1,15 @@
-//import "../styles/components/WordChain.css"
-import "../styles/game.css"
+import "../styles/WordChain.css"
 
 const WordChain = ({ chain }) => {
   return (
     <div className="word-chain">
-      <h2>Cadena de palabras</h2>
-      <ul>
-          {[...chain].reverse().map((word, i) => (
+      <p>Cadena de palabras</p>
+      <ul className="chain">
+          {chain.map((word, i) => (
             <li key={i}>{word.original}</li>
           ))}
       </ul>
+
     </div>
   );
 };
