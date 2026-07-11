@@ -1,7 +1,6 @@
 import { useState } from "react";
 import { validateWord } from "../helpers/validateWord.jsx";
-//import "../styles/components/WordInput.css"
-import "../styles/game.css"
+import "../styles/WordInput.css"
 
 const WordInput = ({ chain, addWord, isValidating, setIsValidating }) => {
     const [word, setWord] = useState("");

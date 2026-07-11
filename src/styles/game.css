@@ -1,4 +1,6 @@
+
 /* Estilos generales */
+/*
 body {
   font-family: Arial, sans-serif;
   background: #f4f4f9;
@@ -12,8 +14,9 @@ h1 {
   text-align: center;
   color: #333;
 }
-
+*/
 /* Contenedor principal */
+/*
 .game-board {
   max-width: 600px;
   width: 90%;
@@ -23,8 +26,9 @@ h1 {
   border-radius: 8px;
   box-shadow: 0 4px 10px rgba(0,0,0,0.1);
 }
-
+*/
 /* Input y botón */
+/*
 form {
   display: flex;
   justify-content: center;
@@ -53,8 +57,9 @@ button {
 button:hover {
   background: #45a049;
 }
-
+*/
 /* Lista de palabras */
+/*
 .word-chain {
   margin-top: 20px;
 }
@@ -71,15 +76,17 @@ button:hover {
   border-radius: 4px;
   font-weight: bold;
 }
-
+*/
 /* Puntaje y timer */
+/*
 .score, .timer {
   text-align: center;
   font-size: 18px;
   margin: 10px 0;
 }
-
+*/
 /* Responsive */
+/*
 @media (max-width: 480px) {
   .game-board {
     padding: 15px;
@@ -101,3 +108,4 @@ button:hover {
   margin-top: 5px;
   text-align: center;
 }
+*/

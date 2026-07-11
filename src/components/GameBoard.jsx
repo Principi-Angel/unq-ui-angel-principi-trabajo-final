@@ -7,9 +7,8 @@ import ScoreBoard from "./ScoreBoard.jsx"
 import { saveScore } from "../helpers/ScoreManager.jsx";
 import { useGame } from "../hooks/useGame.jsx";
 import { useTimer } from "../hooks/useTimer";
+import "../styles/GameBoard.css"
 
-//import "../styles/components/GameBoard.css"
-import "../styles/game.css"
 const GameBoard = () => {
     const {
         chain,
@@ -48,23 +47,26 @@ const GameBoard = () => {
               return (
               <div className="game-board">
                 <h1>Palabras Encadenadas</h1>
-                <Timer
-                  timeLeft={timeLeft}
-                />
-                <WordInput
-                  chain={chain}
-                  addWord={addWord}
-                  isValidating={isValidating}
-                  setIsValidating={setIsValidating}
-                />
+                <div className="game-zone">
+                    <Timer
+                      timeLeft={timeLeft}
+                    />
+                    <WordInput
+                      chain={chain}
+                      addWord={addWord}
+                      isValidating={isValidating}
+                      setIsValidating={setIsValidating}
+                    />
+                    <ScoreBoard
+                      score={score} 
+                      wordsCount={chain.length} 
+                    />
+                </div>
                 <WordChain
                   chain={chain}
                 />
                 
-                <ScoreBoard
-                  score={score} 
-                  wordsCount={chain.length} 
-                />
+                
               </div>
           );
 };

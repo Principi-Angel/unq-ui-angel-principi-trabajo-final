@@ -1,5 +1,4 @@
-//import "../styles/components/Timer.css"
-import "../styles/game.css"
+import "../styles/Timer.css"
  
 const Timer = ({ timeLeft }) => {
     let color = "green";
