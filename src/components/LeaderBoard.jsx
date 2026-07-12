@@ -1,11 +1,11 @@
 import { getTopScores } from "../helpers/ScoreManager";
-import BackToMenuButton from "./BackToMenuButton.jsx";
+import CustomButton from "./CustomButton.jsx";
 
 const Leaderboard = () => {
   const scores = getTopScores(); 
 
   return (
-    <div className="leaderboard">
+    <div className="leader-board">
       <h1>Tabla de Puntajes</h1>
       <p>Estos son los mejores puntajes:</p>
 
@@ -20,7 +20,10 @@ const Leaderboard = () => {
           ))}
         </ol>
       )}
-      <BackToMenuButton />
+      <div className="leader-bord-buttons"> 
+          <CustomButton label="JUGAR" route="/game" />
+          <CustomButton label="RÉCORDS" route="/scores" />
+       </div>
     </div>
   );
 };

@@ -2,7 +2,7 @@ import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { isHighScore } from "../helpers/ScoreManager";
 import ScoreBoard from "./ScoreBoard.jsx"
-import BackToMenuButton from "./BackToMenuButton.jsx";
+import CustomButton from "./CustomButton.jsx";
 import "../styles/GameOverModal.css";
 
 const GameOverModal = ({ score, wordsCount, onRestart, onSaveScore }) => {
@@ -27,6 +27,7 @@ const GameOverModal = ({ score, wordsCount, onRestart, onSaveScore }) => {
            wordsCount={wordsCount}
            final={true}
         />
+        <div className="game-over-modal-record"> 
         {isHighScore(score) ? (
           <>
             <p>¡Hiciste un record!</p>
@@ -37,17 +38,17 @@ const GameOverModal = ({ score, wordsCount, onRestart, onSaveScore }) => {
               value={playerName}
               onChange={(e) => setPlayerName(e.target.value)}
             />
-            <button onClick={handleSave}>Guardar Puntaje</button>
+            <button className="custom-button" onClick={handleSave}>GUARDAR PUNTAJE</button>
           </>
         ) : (
           <p className="no-highscore">
             No lograste un puntaje alto. ¡Intenta de nuevo!
           </p>
         )}
-
-        <div className="modal-buttons">
-          <button onClick={onRestart}>Reiniciar</button>
-          <BackToMenuButton />
+        </div>
+        <div className="menu-buttons"> 
+          <CustomButton label="JUGAR" route="/game" />
+          <CustomButton label="RÉCORDS HISTÓRICOS" route="/scores" />
         </div>
       </div>
     </div>
