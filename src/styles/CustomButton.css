@@ -17,17 +17,19 @@
   max-width: 200px; 
   min-width: 180px; 
   height: 60px;
-  text-align: center;
-  text-justify: left;
+  /*text-align: center;
+  line-height: 10px;
+  */
+  text-align: center;  
+  line-height: normal;  
+  white-space: normal;  
+  word-wrap: break-word; 
+  display: flex;        
+  align-items: center;  
+  justify-content: center
 }
 
 .btn-jugar:hover {
   background: linear-gradient(180deg, #9a00ff, #5a00a3);
   border-color: #ccc;
-}
-
-.custom-button label {
-    color: white;
-    text-align: center;
-  text-justify: left;
 }

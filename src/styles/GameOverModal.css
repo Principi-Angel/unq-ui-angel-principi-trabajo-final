@@ -4,11 +4,11 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0,0,0,0.6); /* fondo semitransparente */
+  background: rgba(96, 90, 90, 0.6); 
   display: flex;
   justify-content: center;
   align-items: center;
-  z-index: 999; /* encima de todo */
+  z-index: 999; 
 }
 
 .game-over-modal {
@@ -33,26 +33,10 @@
   border-radius: 6px;
 }
 
-.modal-buttons {
+.game-over-modal-record{
   display: flex;
-  justify-content: space-around;
-  margin-top: 20px;
-}
-
-.modal-buttons button {
-  padding: 10px 15px;
-  border: none;
-  border-radius: 6px;
-  cursor: pointer;
-  font-size: 16px;
-}
-
-.modal-buttons button:first-child {
-  background: #4caf50;
-  color: white;
-}
-
-.modal-buttons button:last-child {
-  background: #2196f3;
-  color: white;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
 }
