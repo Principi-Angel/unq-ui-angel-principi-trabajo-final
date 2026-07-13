@@ -1,4 +1,4 @@
-import { normalizeWord } from "./constants.jsx";
+import { normalizeWord } from "./normalizeWord.jsx";
 import { validateWordExists } from "../services/apiService.jsx";
 
 export async function validateWord(word, chain) {
