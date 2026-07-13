@@ -5,7 +5,7 @@ const WordChain = ({ chain, colorZone }) => {
   return (
     <div className="word-chain">
       <p>Cadena de palabras</p>
-      <ul className={`chain ${colorZone.toLowerCase()}`}>
+      <ul className={`chain ${colorZone}`}>
           {chain.map((word, i) => (
             <li key={i}>{word.original}</li>
           ))}

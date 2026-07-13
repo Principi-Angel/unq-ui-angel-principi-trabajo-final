@@ -1,0 +1,42 @@
+:root {
+    
+    /* greens - safe zone */
+    --green-1:#d8ffd8;
+    --green-2:#b8f7b8;
+    --green-3:#86eb86;
+    --green-4:#43d643;
+    --green-5:#169916;
+
+    /* yellows */
+    --yellow-1:#fff9d6;
+    --yellow-2:#ffef99;
+    --yellow-3:#ffe45c;
+    --yellow-4:#ffd11f;
+    --yellow-5:#e0ad00;
+
+    /* reds */
+    --red-1:#ffd8d8;
+    --red-2:#ffaaaa;
+    --red-3:#ff7070;
+    --red-4:#f03c3c;
+    --red-5:#bf1010;
+
+    /* borders */
+    --radius-sm: 6px;
+    --radius-md: 12px;
+    --radius-lg: 20px;
+
+    /* spaces */
+    --spacing-xs: 0.25rem;
+    --spacing-sm: 0.5rem;
+    --spacing-md: 1rem;
+    --spacing-lg: 1.5rem;
+    --spacing-xl: 2rem;
+
+    /* shadows */
+    --shadow-sm: 0 2px 4px rgba(0,0,0,.15);
+    --shadow-md: 0 4px 12px rgba(0,0,0,.2);
+    --shadow-lg: 0 8px 20px rgba(0,0,0,.3);
+
+   
+}
