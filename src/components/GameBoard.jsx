@@ -3,12 +3,12 @@ import WordInput from "./WordInput";
 import WordChain from "./WordChain";
 import Timer from "./Timer";
 import GameOverModal from "./GameOverModal";
-import ScoreBoard from "./ScoreBoard.jsx"
-import { saveScore } from "../services/scoreService.js";
-import { useGame } from "../hooks/useGame.";
+import ScoreBoard from "./ScoreBoard"
+import { saveScore } from "../services/scoreService";
+import { useGame } from "../hooks/useGame";
 import { useTimer } from "../hooks/useTimer";
 import { getZone } from "../helpers/getZone";
-import "../styles/components/GameBoard.css"
+import "../styles/components/GameBoard.css";
 
 const GameBoard = () => {
     const {

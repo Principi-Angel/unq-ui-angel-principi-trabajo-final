@@ -1,5 +1,5 @@
-import { normalizeWord } from "./normalizeWord.js";
-import { validateWordExists } from "../services/apiService.jsx";
+import { normalizeWord } from "./normalizeWord";
+import { validateWordExists } from "../services/apiService";
 
 export async function validateWord(word, chain) {
       const normalized = normalizeWord(word);
