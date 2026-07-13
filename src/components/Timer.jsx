@@ -1,15 +1,10 @@
 import "../styles/Timer.css"
- 
-const Timer = ({ timeLeft }) => {
-    let color = "green";
-  
-    if (timeLeft !== null) {
-      if (timeLeft <= 10) color = "orange";
-      if (timeLeft <= 5) color = "red";
-    }
+import { ZONES } from "../helpers/zones";
+
+const Timer = ({ timeLeft, colorZone}) => {
   
     return (
-      <div className="timer" style={{ color }}>
+      <div className={`timer ${colorZone.toLowerCase()}`}>
         {timeLeft === null 
           ? "EMPEZÁ A JUGAR" 
           : timeLeft          

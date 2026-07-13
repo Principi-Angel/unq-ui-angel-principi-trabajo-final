@@ -1,0 +1,21 @@
+.timer {
+  font-size: 2rem;
+  font-weight: bold;
+  text-align: center;
+}
+
+.timer.safe {
+  color: green;
+}
+
+.timer.warning {
+  color: orange;
+}
+
+.timer.danger {
+  color: red;
+}
+
+.timer.idle {
+  color: gray;
+}
