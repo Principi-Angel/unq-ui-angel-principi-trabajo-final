@@ -7,6 +7,7 @@ import ScoreBoard from "./ScoreBoard.jsx"
 import { saveScore } from "../helpers/ScoreManager.jsx";
 import { useGame } from "../hooks/useGame.jsx";
 import { useTimer } from "../hooks/useTimer";
+import { getZone } from "../helpers/getZone.jsx";
 import "../styles/GameBoard.css"
 
 const GameBoard = () => {
@@ -32,6 +33,8 @@ const GameBoard = () => {
       saveScore(name, score, wordsCount);
     };
 
+    const colorZone = getZone(timeLeft);
+
     if (gameOver) {
                 return (
                   <div className="game-over-screen">
@@ -50,6 +53,7 @@ const GameBoard = () => {
                 <div className="game-zone">
                     <Timer
                       timeLeft={timeLeft}
+                      colorZone={colorZone}
                     />
                     <WordInput
                       chain={chain}
@@ -64,6 +68,7 @@ const GameBoard = () => {
                 </div>
                 <WordChain
                   chain={chain}
+                  colorZone={colorZone}
                 />
                 
                 

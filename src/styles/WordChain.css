@@ -1,15 +1,3 @@
-.word-chain {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.word-chain p {
-    text-transform: uppercase;
-    text-shadow: #4a68ef;
-    font-size: xx-large;
-}
-
 .chain {
   display: flex;
   flex-wrap: wrap;
@@ -24,7 +12,24 @@
   padding: 4px 8px;
   border-radius: 30px;
   border-style: solid;
-  border-color: #726d6d;
   border-width: 5px;
   font-size: 2rem;
 }
+
+/* Estados según zona */
+.chain.safe li {
+  border-color: green; /*var(--color-green);*/
+}
+
+.chain.warning li {
+  border-color: orange; /*var(--color-orange);*/
+}
+
+.chain.danger li {
+  border-color: red; /*var(--color-red);*/
+}
+
+.chain.idle li {
+  border-color: grey;/*var(--color-black);*/
+}
+
