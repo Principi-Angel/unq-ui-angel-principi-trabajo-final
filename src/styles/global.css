@@ -16,7 +16,7 @@
     align-items:center;
 }
 
-button {
+.primary-button {
   font-size: 1rem;
   font-weight: bold;
   padding: 0.6rem 1.2rem;
