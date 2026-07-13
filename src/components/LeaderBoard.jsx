@@ -1,5 +1,6 @@
 import { getTopScores } from "../helpers/ScoreManager";
 import CustomButton from "./CustomButton.jsx";
+import "../styles/components/LeaderBoard.css";
 
 const Leaderboard = () => {
   const scores = getTopScores(); 

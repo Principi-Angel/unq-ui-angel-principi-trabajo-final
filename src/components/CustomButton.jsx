@@ -1,6 +1,6 @@
 // ButtonCustom.jsx
 import { useNavigate } from "react-router-dom";
-import "../styles/CustomButton.css";
+import "../styles/components/CustomButton.css";
 
 function CustomButton({ label, route }) {
   const navigate = useNavigate();

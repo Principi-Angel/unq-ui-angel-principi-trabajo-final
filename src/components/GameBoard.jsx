@@ -8,7 +8,7 @@ import { saveScore } from "../helpers/ScoreManager.jsx";
 import { useGame } from "../hooks/useGame.jsx";
 import { useTimer } from "../hooks/useTimer";
 import { getZone } from "../helpers/getZone.jsx";
-import "../styles/GameBoard.css"
+import "../styles/components/GameBoard.css"
 
 const GameBoard = () => {
     const {

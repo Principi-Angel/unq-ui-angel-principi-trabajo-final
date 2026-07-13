@@ -1,3 +1,5 @@
+import "../styles/components/ScoreBoard.css";
+
 const ScoreBoard = ({ score, wordsCount, final = false }) => {
   return (
     <div className="score">
