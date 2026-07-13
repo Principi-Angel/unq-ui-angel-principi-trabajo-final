@@ -16,24 +16,69 @@
     align-items:center;
 }
 
+button {
+  font-size: 1rem;
+  font-weight: bold;
+  padding: 0.6rem 1.2rem;
+  border: 2px solid var(--color, #333);
+  border-radius: var(--radius-md);
+  background-color: transparent;
+  background: linear-gradient(180deg, #7a00cc, #4b0082); 
+
+  cursor: pointer;
+
+  transition:
+    color .25s,
+    border-color .25s,
+    background-color .25s,
+    transform .25s;
+}
+
+button:hover {
+  background: linear-gradient(180deg, #9a00ff, #5a00a3);
+  color: #fff;
+  transform: scale(1.05);
+}
+
+
 /* COLORS ZONE */
 /* greens - safe zone */
-.green-1 { --color: var(--green-1); --shadow: rgba(130,220,130,.15); }
-.green-2 { --color: var(--green-2); --shadow: rgba(130,220,130,.25); }
-.green-3 { --color: var(--green-3); --shadow: rgba(130,220,130,.35); }
-.green-4 { --color: var(--green-4); --shadow: rgba(67,214,67,.45);   }
-.green-5 { --color: var(--green-5); --shadow: rgba(22,153,22,.55);   }
+.green-1 { --color: var(--green-1); --shadow: rgba(130,220,130,.15); --text-shadow: rgba(0,0,0,.08); }
+.green-2 { --color: var(--green-2); --shadow: rgba(130,220,130,.25); --text-shadow: rgba(0,0,0,.12); }
+.green-3 { --color: var(--green-3); --shadow: rgba(130,220,130,.35); --text-shadow: rgba(0,0,0,.16); }
+.green-4 { --color: var(--green-4); --shadow: rgba(67,214,67,.45);   --text-shadow: rgba(0,0,0,.20); }
+.green-5 { --color: var(--green-5); --shadow: rgba(22,153,22,.55);   --text-shadow: rgba(0,0,0,.24); }
 
 /* yellows - caution zone */
-.yellow-1 { --color: var(--yellow-1); --shadow: rgba(255,249,214,.15); }
-.yellow-2 { --color: var(--yellow-2); --shadow: rgba(255,239,153,.25); }
-.yellow-3 { --color: var(--yellow-3); --shadow: rgba(255,228,92,.35);  }
-.yellow-4 { --color: var(--yellow-4); --shadow: rgba(255,209,31,.45);  }
-.yellow-5 { --color: var(--yellow-5); --shadow: rgba(224,173,0,.55);   }
+.yellow-1 { --color: var(--yellow-1); --shadow: rgba(255,249,214,.15); --text-shadow: rgba(0,0,0,.08); }
+.yellow-2 { --color: var(--yellow-2); --shadow: rgba(255,239,153,.25); --text-shadow: rgba(0,0,0,.12); }
+.yellow-3 { --color: var(--yellow-3); --shadow: rgba(255,228,92,.35);  --text-shadow: rgba(0,0,0,.16); }
+.yellow-4 { --color: var(--yellow-4); --shadow: rgba(255,209,31,.45);  --text-shadow: rgba(0,0,0,.20); }
+.yellow-5 { --color: var(--yellow-5); --shadow: rgba(224,173,0,.55);   --text-shadow: rgba(0,0,0,.24); }
 
 /* reds - danger zone */
-.red-1 { --color: var(--red-1); --shadow: rgba(255,216,216,.15);  }
-.red-2 { --color: var(--red-2); --shadow: rgba(255,170,170,.25);  }
-.red-3 { --color: var(--red-3); --shadow: rgba(255,112,112,.35);  }
-.red-4 { --color: var(--red-4); --shadow: rgba(240,60,60,.45);    }
-.red-5 { --color: var(--red-5); --shadow: rgba(191,16,16,.60);    }
+.red-1 { --color: var(--red-1); --shadow: rgba(255,216,216,.15); --text-shadow: rgba(0,0,0,.08); }
+.red-2 { --color: var(--red-2); --shadow: rgba(255,170,170,.25); --text-shadow: rgba(0,0,0,.12); }
+.red-3 { --color: var(--red-3); --shadow: rgba(255,112,112,.35); --text-shadow: rgba(0,0,0,.16); }
+.red-4 { --color: var(--red-4); --shadow: rgba(240,60,60,.45);   --text-shadow: rgba(0,0,0,.20); }
+.red-5 { --color: var(--red-5); --shadow: rgba(191,16,16,.60);   --text-shadow: rgba(0,0,0,.24); }
+
+.red-3,
+.red-4,
+.red-5{
+    animation: pulse .7s infinite;
+}
+
+@keyframes pulse{
+    0%{
+        transform: scale(1);
+    }
+
+    50%{
+        transform: scale(1.06);
+    }
+
+    100%{
+        transform: scale(1);
+    }
+}

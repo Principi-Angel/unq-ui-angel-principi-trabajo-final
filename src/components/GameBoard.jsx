@@ -26,7 +26,7 @@ const GameBoard = () => {
     useTimer({ timeLeft, isValidating, tick, endGame });
     
     const handleRestart = () => {
-      resetGame()
+      resetGame();
     };
 
     const handleSaveScore = (name, score, wordsCount) => {

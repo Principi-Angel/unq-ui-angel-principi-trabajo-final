@@ -1,10 +1,10 @@
+import { useNavigate } from "react-router-dom";
 import { getTopScores } from "../helpers/ScoreManager";
-import CustomButton from "./CustomButton.jsx";
 import "../styles/components/LeaderBoard.css";
 
 const Leaderboard = () => {
   const scores = getTopScores(); 
-
+const navigate = useNavigate();
   return (
     <div className="leader-board">
       <h1>Tabla de Puntajes</h1>
@@ -21,10 +21,7 @@ const Leaderboard = () => {
           ))}
         </ol>
       )}
-      <div className="leader-bord-buttons"> 
-          <CustomButton label="JUGAR" route="/game" />
-          <CustomButton label="RÉCORDS" route="/scores" />
-       </div>
+    <button onClick={() => navigate("/game")}>JUGAR</button>
     </div>
   );
 };
