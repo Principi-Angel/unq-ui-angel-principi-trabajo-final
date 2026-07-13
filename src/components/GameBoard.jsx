@@ -1,13 +1,13 @@
 import { useState } from "react";
-import WordInput from "./WordInput.jsx";
-import WordChain from "./WordChain.jsx";
-import Timer from "./Timer.jsx";
-import GameOverModal from "./GameOverModal.jsx";
+import WordInput from "./WordInput";
+import WordChain from "./WordChain";
+import Timer from "./Timer";
+import GameOverModal from "./GameOverModal";
 import ScoreBoard from "./ScoreBoard.jsx"
-import { saveScore } from "../helpers/ScoreManager.jsx";
-import { useGame } from "../hooks/useGame.jsx";
+import { saveScore } from "../services/scoreService.js";
+import { useGame } from "../hooks/useGame.";
 import { useTimer } from "../hooks/useTimer";
-import { getZone } from "../helpers/getZone.jsx";
+import { getZone } from "../helpers/getZone";
 import "../styles/components/GameBoard.css"
 
 const GameBoard = () => {

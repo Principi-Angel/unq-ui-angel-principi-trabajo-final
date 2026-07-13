@@ -1,5 +1,5 @@
 import { useNavigate } from "react-router-dom";
-import { getTopScores } from "../helpers/ScoreManager";
+import { getTopScores } from "../services/scoreService";
 import "../styles/components/LeaderBoard.css";
 
 const Leaderboard = () => {
