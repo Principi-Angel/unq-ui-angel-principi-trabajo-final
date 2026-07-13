@@ -3,7 +3,7 @@ import { useNavigate } from "react-router-dom";
 import { isHighScore } from "../helpers/ScoreManager";
 import ScoreBoard from "./ScoreBoard.jsx"
 import CustomButton from "./CustomButton.jsx";
-import "../styles/GameOverModal.css";
+import "../styles/components/GameOverModal.css";
 
 const GameOverModal = ({ score, wordsCount, onRestart, onSaveScore }) => {
   const [playerName, setPlayerName] = useState("");
