@@ -16,8 +16,6 @@ const GameOverModal = ({ score, wordsCount, onRestart, onSaveScore }) => {
     navigate("/scores")
   };
 
- const handleMenu = () => { navigate("/"); }; 
-
   return (
     <div className="modal-overlay">
       <div className="game-over-modal">
@@ -46,10 +44,10 @@ const GameOverModal = ({ score, wordsCount, onRestart, onSaveScore }) => {
           </p>
         )}
         </div>
-        <div className="menu-buttons"> 
-          <CustomButton label="JUGAR" route="/game" />
-          <CustomButton label="RÉCORDS HISTÓRICOS" route="/scores" />
-        </div>
+          <button onClick={onRestart}>JUGAR</button>
+          <button onClick={() => navigate("/scores")}>RÉCORDS HISTÓRICOS</button>
+
+       
       </div>
     </div>
   );

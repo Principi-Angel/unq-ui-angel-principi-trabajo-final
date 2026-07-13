@@ -1,25 +1,27 @@
 :root {
     
-    /* greens - safe zone */
-    --green-1:#d8ffd8;
-    --green-2:#b8f7b8;
-    --green-3:#86eb86;
-    --green-4:#43d643;
-    --green-5:#169916;
 
-    /* yellows */
-    --yellow-1:#fff9d6;
-    --yellow-2:#ffef99;
-    --yellow-3:#ffe45c;
-    --yellow-4:#ffd11f;
-    --yellow-5:#e0ad00;
+  /* greens - safe zone */
+  --green-1: #a8e6a8; /* más claro */
+  --green-2: #89d789;
+  --green-3: #6ac76a;
+  --green-4: #4caf50;
+  --green-5: #3a8b3a; /* más oscuro */
 
-    /* reds */
-    --red-1:#ffd8d8;
-    --red-2:#ffaaaa;
-    --red-3:#ff7070;
-    --red-4:#f03c3c;
-    --red-5:#bf1010;
+  /* yellows - caution zone */
+  --yellow-1: #fff9d6;
+  --yellow-2: #fff2b3;
+  --yellow-3: #ffe999;
+  --yellow-4: #ffd966;
+  --yellow-5: #e0ad00;
+
+  /* reds - danger zone */
+  --red-1: #ffd8d8;
+  --red-2: #ffb3b3;
+  --red-3: #ff8a8a;
+  --red-4: #f03c3c;
+  --red-5: #bf1010;
+
 
     /* borders */
     --radius-sm: 6px;

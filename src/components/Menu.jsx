@@ -1,16 +1,16 @@
 import { Link } from "react-router-dom";
-import CustomButton from "./CustomButton.jsx";
+import { useNavigate } from "react-router-dom";
 import "../styles/components/Menu.css";
 
 const Menu = () => {
-  
+  const navigate = useNavigate();
 return (
   <div className="menu">
     <h1>Palabras Encadenadas</h1>
     <p>Bienvenido al juego</p>
     <div className="menu-buttons"> 
-      <CustomButton label="JUGAR" route="/game" />
-      <CustomButton label="RÉCORDS" route="/scores" />
+      <button onClick={() => navigate("/game")}>JUGAR</button>
+      <button onClick={() => navigate("/scores")}>RÉCORDS</button>
     </div>
   </div>
 ); 
