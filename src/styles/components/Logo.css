@@ -114,6 +114,41 @@
 
 }
 
+.logo-small{
+    gap: var(--spacing-sm);
+}
+
+.logo-small .logo-chain{
+    gap: .35rem;
+}
+
+.logo-small .link{
+    width:20px;
+    height:20px;
+    border-width:3px;
+}
+
+.logo-small .link::after{
+    width:12px;
+    right:-12px;
+    height:3px;
+}
+
+.logo-small .timer-link{
+    width:45px;
+    height:45px;
+    border-width:4px;
+}
+
+.logo-small .timer-link span{
+    font-size:1rem;
+}
+
+.logo-small .logo-title{
+    font-size:.8rem;
+    letter-spacing:1px;
+}
+
 @keyframes pulse{
 
     0%{
@@ -133,5 +168,9 @@
         transform:scale(1);
 
     }
+
+
+
+
 
 }
