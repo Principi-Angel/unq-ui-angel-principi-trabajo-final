@@ -11,26 +11,42 @@
     #f3f3f3
   );
 
+  
+  /* Tipografías */
+  --font-logo: "Michroma", sans-serif;        /* Logo and branding */
+  --font-ui: "Economica", sans-serif;      /* seccions, buttons, leaderboard */
+  --font-timer: "Orbitron", sans-serif;       /* Timer */
+  --font-input: "Inter", sans-serif;          /* Input */
+  --font-input-alt: "Roboto Mono", monospace; /* Input */
+
+  /* Font sizes */
+  --text-xs: .9rem;
+  --text-sm: 1rem;
+  --text-md: 1.2rem;
+  --text-lg: 1.6rem;
+  --text-xl: 2rem;
+  --text-xxl: 3rem;
+
   /* greens - safe zone */
-  --green-1: #a8e6a8; 
-  --green-2: #89d789;
-  --green-3: #6ac76a;
-  --green-4: #4caf50;
-  --green-5: #3a8b3a;
+  --green-1: #4caf50;
+  --green-2: #3f8f44;
+  --green-3: #357a3a;
+  --green-4: #2b6630;
+  --green-5: #1f4d24;
 
   /* yellows - caution zone */
-  --yellow-1: #fff9d6;
-  --yellow-2: #fff2b3;
-  --yellow-3: #ffe999;
-  --yellow-4: #ffd966;
-  --yellow-5: #e0ad00;
+  --yellow-1: #e0ad00;
+  --yellow-2: #c99700;
+  --yellow-3: #b38300;
+  --yellow-4: #8f6800;
+  --yellow-5: #6b4e00;
 
   /* reds - danger zone */
-  --red-1: #ffd8d8;
-  --red-2: #ffb3b3;
-  --red-3: #ff8a8a;
-  --red-4: #f03c3c;
-  --red-5: #bf1010;
+  --red-1: #f03c3c;
+  --red-2: #d83434;
+  --red-3: #b82c2c;
+  --red-4: #991f1f;
+  --red-5: #701414;
 
   /* borders */
   --radius-sm: 6px;

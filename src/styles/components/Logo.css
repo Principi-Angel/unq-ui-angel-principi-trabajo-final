@@ -91,14 +91,12 @@
 }
 
 .logo-title{
-
+    font-family: var(--font-logo);
     display:flex;
 
     flex-direction:column;
 
     align-items:center;
-
-    font-family:"Michroma",sans-serif;
 
     text-transform:uppercase;
 
