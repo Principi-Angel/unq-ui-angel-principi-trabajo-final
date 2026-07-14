@@ -4,7 +4,7 @@ import { ZONES } from "../helpers/zones";
 const WordChain = ({ chain, colorZone }) => {
   return (
     <div className="word-chain">
-      <p>Cadena de palabras</p>
+      <h1 className="section-title">Cadena de palabras</h1>
       <ul className={`chain ${colorZone}`}>
           {chain.map((word, i) => (
             <li key={i}>{word.original}</li>

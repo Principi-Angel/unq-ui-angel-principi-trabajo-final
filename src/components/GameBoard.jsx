@@ -1,9 +1,11 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
 import WordInput from "./WordInput";
 import WordChain from "./WordChain";
 import Timer from "./Timer";
 import GameOverModal from "./GameOverModal";
-import ScoreBoard from "./ScoreBoard"
+import ScoreBoard from "./ScoreBoard";
+import Logo from "./Logo";
 import { saveScore } from "../services/scoreService";
 import { useGame } from "../hooks/useGame";
 import { useTimer } from "../hooks/useTimer";
@@ -49,29 +51,25 @@ const GameBoard = () => {
              }
               return (
               <div className="game-board">
-                <h1>Palabras Encadenadas</h1>
-                <div className="game-zone">
-                    <Timer
-                      timeLeft={timeLeft}
-                      colorZone={colorZone}
-                    />
-                    <WordInput
-                      chain={chain}
-                      addWord={addWord}
-                      isValidating={isValidating}
-                      setIsValidating={setIsValidating}
-                    />
-                    <ScoreBoard
-                      score={score} 
-                      wordsCount={chain.length} 
-                    />
+                <div className="game-layout">
+                  <div className="game-left">
+                    <Link to="/"><Logo justTitle={true} /></Link>
+                  </div>
+                            
+                  <div className="game-center">
+                      <Timer timeLeft={timeLeft} colorZone={colorZone} />
+                      <WordInput
+                        chain={chain}
+                        addWord={addWord}
+                        isValidating={isValidating}
+                        setIsValidating={setIsValidating}
+                      />                    
+                  </div>      
+                  <div className="game-right">
+                    <ScoreBoard score={score} wordsCount={chain.length} />
+                  </div>
                 </div>
-                <WordChain
-                  chain={chain}
-                  colorZone={colorZone}
-                />
-                
-                
+                <WordChain chain={chain} colorZone={colorZone} /> 
               </div>
           );
 };
