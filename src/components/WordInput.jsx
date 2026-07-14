@@ -52,6 +52,7 @@ const WordInput = ({ chain, addWord, isValidating, setIsValidating }) => {
             onKeyDown={(e) => {
                 if (e.key === " ") {
                     e.preventDefault();
+                    handleSubmit(e);
                 }
             }}
           />
