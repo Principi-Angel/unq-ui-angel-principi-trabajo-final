@@ -32,7 +32,8 @@ const navigate = useNavigate();
         )}
         <button className="primary-button" onClick={() => navigate("/game")}>JUGAR</button>
       </div>
-      <Logo className="logo-side"/>
+      <div className="logo-side"> <Logo /> </div>
+      
     </div>
   );
 };
