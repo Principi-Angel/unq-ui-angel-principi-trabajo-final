@@ -15,7 +15,6 @@ const WordInput = ({ chain, addWord, isValidating, setIsValidating }) => {
     useEffect(() => {
         if (!isValidating) {
             inputRef.current?.focus();
-            inputRef.current?.select();
         }
     }, [isValidating]);
 
