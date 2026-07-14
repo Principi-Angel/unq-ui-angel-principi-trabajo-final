@@ -69,7 +69,7 @@ const GameBoard = () => {
                     <ScoreBoard score={score} wordsCount={chain.length} />
                   </div>
                 </div>
-                <WordChain chain={chain} colorZone={colorZone} /> 
+                <WordChain className="game-chain" chain={chain} colorZone={colorZone} /> 
               </div>
           );
 };

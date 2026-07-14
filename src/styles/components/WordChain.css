@@ -1,24 +1,22 @@
 .word-chain {
-    width: 100%;
-    padding:
-        var(--spacing-md)
-        var(--spacing-lg);
+    width:100%;
+    height:100%;
+    display:flex;
+    flex-direction:column;
+    padding:var(--spacing-lg);
+    background:white;
     border-radius:var(--radius-lg);
-
-    background:rgba(255,255,255,.25);
-
-    box-shadow:var(--shadow-sm);
-    
+    overflow:hidden;
 }
 
-.chain {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    gap: 0;
-    list-style: none;
-    padding: 0;
-    margin: 0;
+.chain{
+    flex:1;
+    display:flex;
+    flex-wrap:wrap;
+    align-content:flex-start;
+    gap:0;
+    overflow-y:auto;
+    padding-right:var(--spacing-sm);
 }
 
 .chain li {

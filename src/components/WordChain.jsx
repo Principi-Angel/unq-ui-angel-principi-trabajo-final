@@ -1,16 +1,15 @@
 import "../styles/components/WordChain.css"
 import { ZONES } from "../helpers/zones";
 
-const WordChain = ({ chain, colorZone }) => {
+const WordChain = ({ chain, colorZone, className = "" }) => {
   return (
-    <div className="word-chain">
+    <div className={`word-chain ${className}`.trim()}>
       <h1 className="section-title">Cadena de palabras</h1>
       <ul className={`chain ${colorZone}`}>
-          {chain.map((word, i) => (
-            <li key={i}>{word.original}</li>
-          ))}
+        {chain.map((word, i) => (
+          <li key={i}>{word.original}</li>
+        ))}
       </ul>
-
     </div>
   );
 };
