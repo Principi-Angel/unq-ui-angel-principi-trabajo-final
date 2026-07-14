@@ -3,19 +3,12 @@
     padding:
         var(--spacing-md)
         var(--spacing-lg);
-    overflow-y: auto;   
     border-radius:var(--radius-lg);
 
     background:rgba(255,255,255,.25);
 
     box-shadow:var(--shadow-sm);
-}
-
-.word-chain p {
-    margin-bottom: var(--spacing-sm);
-    font-size: 1.2rem;
-    font-weight: bold;
-    text-align: center;
+    
 }
 
 .chain {

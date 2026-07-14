@@ -1,13 +1,89 @@
 .game-board {
+    min-height: 100vh;
+
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+
+    padding: var(--spacing-xl);
+
+    background: var(--panel-bg);
 }
 
-.game-zone {
+.game-layout {
+
+    width: 100%;
+    max-width: 1200px;
+
+    display: grid;
+
+    grid-template-columns: 140px minmax(500px, 1fr) 180px;
+
+    align-items: start;
+
+    column-gap: var(--spacing-xl);
+
+    min-height: 260px;
+}
+
+.game-left {
+
+    display: flex;
+
+    justify-content: flex-start;
+    align-items: flex-start;
+
+    padding-top: .25rem;
+}
+
+.game-left .logo{
+
+    transform: scale(.68);
+
+    transform-origin: top left;
+}
+
+.game-center{
+
     display:flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+
+    flex-direction:column;
+
+    align-items:center;
+
+    justify-content:flex-start;
+
+    gap:var(--spacing-lg);
+
+    padding-top:.75rem;
+}
+/*
+.game-zone {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  padding: 2rem;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-md);
+  background: #fff;
+  width: 100%;
+}*/
+
+.game-right{
+
+    display:flex;
+
+    justify-content:flex-end;
+
+    align-items:flex-start;
+
+    padding-top:.75rem;
+}
+
+.word-chain{
+
+    width:100%;
+
+    margin-top:var(--spacing-lg);
 }

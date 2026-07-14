@@ -1,0 +1,43 @@
+.leader-board {
+  display: flex;
+  flex-direction: row; 
+  align-items: center;
+  justify-content: center;
+
+  max-width: 900px;
+  margin: 2rem auto;
+  padding: 2rem;
+
+  background: var(--panel-bg);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-md);
+  gap: 2rem; 
+}
+
+.leader-board-center {
+  flex: 1; 
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.logo-side {
+  flex-shrink: 0;
+}
+
+.leader-board p {
+  margin-bottom: 1rem;
+  color: #555;
+}
+
+.leader-board ol {
+  width: 100%;
+  padding-left: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.leader-board li {
+  margin: 0.4rem 0;
+  font-size: 1.1rem;
+  color: #333;
+}

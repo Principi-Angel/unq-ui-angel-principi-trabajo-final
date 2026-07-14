@@ -7,6 +7,7 @@ import "../styles/components/GameOverModal.css";
 const GameOverModal = ({ score, wordsCount, onRestart, onSaveScore }) => {
   const [playerName, setPlayerName] = useState("");
   const navigate = useNavigate();
+  const MAX_CHARS_NAME_INPUT = 30;
 
   const handleSave = () => {
     if (!playerName.trim()) return;
@@ -18,7 +19,7 @@ const GameOverModal = ({ score, wordsCount, onRestart, onSaveScore }) => {
   return (
     <div className="modal-overlay">
       <div className="game-over-modal">
-        <h1>Fin de la partida</h1>
+        <h1 className="section-title">Fin de la partida</h1>
         <ScoreBoard
            score={score}
            wordsCount={wordsCount}
@@ -33,9 +34,13 @@ const GameOverModal = ({ score, wordsCount, onRestart, onSaveScore }) => {
               type="text"
               placeholder="Ingresa tu nombre"
               value={playerName}
-              onChange={(e) => setPlayerName(e.target.value)}
+              onChange={(e) => {
+                if (e.target.value.length <= MAX_CHARS_NAME_INPUT) {
+                  setPlayerName(e.target.value);
+                }
+              }}
             />
-            <button className="custom-button" onClick={handleSave}>GUARDAR PUNTAJE</button>
+            <button className="primary-button" onClick={handleSave}>GUARDAR PUNTAJE</button>
           </>
         ) : (
           <p className="no-highscore">
@@ -43,10 +48,8 @@ const GameOverModal = ({ score, wordsCount, onRestart, onSaveScore }) => {
           </p>
         )}
         </div>
-          <button onClick={onRestart}>JUGAR</button>
-          <button onClick={() => navigate("/scores")}>RÉCORDS HISTÓRICOS</button>
-
-       
+          <button className="primary-button" onClick={onRestart}>JUGAR</button>
+          <button className="primary-button" onClick={() => navigate("/scores")}>RÉCORDS HISTÓRICOS</button>
       </div>
     </div>
   );
