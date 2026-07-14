@@ -28,6 +28,14 @@ html, body {
     align-items:center;
 }
 
+.buttons-box {
+    display: flex;
+    flex-direction: row;
+    justify-content:center;
+    align-items:center;
+    gap: 2rem;
+}
+
 .panel{
     background:rgba(186, 178, 186, 0);
     border-radius:var(--radius-lg);

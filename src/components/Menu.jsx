@@ -9,7 +9,7 @@ return (
   <div className="menu">
     <Logo/>
     <h1 className="section-title">Bienvenido al juego</h1>
-    <div className="menu-buttons"> 
+    <div className="buttons-box"> 
       <button className="primary-button" onClick={() => navigate("/game")}>JUGAR</button>
       <button className="primary-button" onClick={() => navigate("/scores")}>RÉCORDS</button>
     </div>
