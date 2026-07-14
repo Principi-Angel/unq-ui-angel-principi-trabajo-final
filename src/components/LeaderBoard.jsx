@@ -8,7 +8,11 @@ const Leaderboard = () => {
 const navigate = useNavigate();
   return (
     <div className="leader-board">
-      <Logo className="logo-side"/>
+
+      <div className="logo-side">
+         <Logo small />
+      </div>
+      
       <div className="leader-board-center">
         <h1 className="section-title">Tabla de Puntajes</h1>
         <p>Estos son los mejores puntajes:</p>
@@ -32,7 +36,10 @@ const navigate = useNavigate();
         )}
         <button className="primary-button" onClick={() => navigate("/game")}>JUGAR</button>
       </div>
-      <div className="logo-side"> <Logo /> </div>
+      
+      <div className="logo-side">
+         <Logo small />
+      </div>
       
     </div>
   );
