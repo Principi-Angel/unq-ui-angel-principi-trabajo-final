@@ -1,9 +1,17 @@
 /* fonts styles */
-/* input and chain words */
-@import url('https://fonts.googleapis.com/css2?family=Michroma&display=swap'); 
+/* Logo and branding */
+@import url('https://fonts.googleapis.com/css2?family=Michroma&display=swap');
 
-/* rest of the game, buttons, leaderboard, modal, etc*/
-@import url('https://fonts.googleapis.com/css2?family=Economica:ital,wght@0,400;0,700;1,400;1,700&family=Michroma&display=swap');
+/* Text and buttons */
+@import url('https://fonts.googleapis.com/css2?family=Economica:wght@400;700&display=swap');
+
+/* Timer */
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap');
+
+/* Input */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Roboto+Mono:wght@400;700&display=swap');
+
+
 
 html, body {
     width: 100%;
@@ -42,15 +50,20 @@ html, body {
     box-shadow:var(--shadow-md);
 }
 
+.timer,
+.score-board,
+.primary-button,
+input,
+.chain li,
+.p {
+    font-family: var(--font-ui);
+}
+
 /* titles */
 .section-title{
-
     color:#4b0082;
-
     text-shadow:1px 1px 2px rgba(0,0,0,.08);
-
-    font-family:"Economica",sans-serif;
-
+    font-family: var(--font-title);
 }
 
 /* buttons */
