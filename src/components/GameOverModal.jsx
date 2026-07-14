@@ -48,8 +48,10 @@ const GameOverModal = ({ score, wordsCount, onRestart, onSaveScore }) => {
           </p>
         )}
         </div>
-          <button className="primary-button" onClick={onRestart}>JUGAR</button>
-          <button className="primary-button" onClick={() => navigate("/scores")}>RÉCORDS HISTÓRICOS</button>
+        <div className="buttons-box">
+            <button className="primary-button" onClick={onRestart}>JUGAR</button>
+            <button className="primary-button" onClick={() => navigate("/scores")}>RÉCORDS</button>
+          </div>
       </div>
     </div>
   );
