@@ -18,25 +18,21 @@ form {
   animation: fadeIn 0.3s ease-in-out;
 }
 
-input[type="text"] {
-  width: 100%;
-  max-width: 320px;
-  padding: 0.7rem 1rem;
-  font-size: 1.1rem;
-  font-family: "Economica", sans-serif;
-  border: 2px solid var(--primary);
-  border-radius: var(--radius-md);
-  background: linear-gradient(180deg, #fff, #f7f3ff);
-  color: #333;
-  box-shadow: 0 0 8px rgba(75, 0, 130, 0.15);
-  transition: all 0.25s ease-in-out;
+input {
+    border-radius:var(--radius-lg);
+    box-shadow:var(--shadow-md);
 }
 
-input[type="text"]:focus {
-  outline: none;
-  border-color: var(--primary-light);
-  box-shadow: 0 0 12px rgba(122, 0, 204, 0.25);
-  background: linear-gradient(180deg, #faf8ff, #f3eaff);
+input[type="text"]{
+    width:320px;
+    padding:.75rem 1rem;
+    transition:border-color .2s, box-shadow .2s;
+}
+
+input[type="text"]:focus{
+    outline:none;
+    border-color:var(--primary-light);
+    box-shadow:0 0 8px rgba(122,0,204,.18);
 }
 
 input[type="text"]:disabled {
