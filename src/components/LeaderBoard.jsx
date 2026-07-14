@@ -18,8 +18,14 @@ const navigate = useNavigate();
         ) : (
           <ol>
             {scores.map((s, index) => (
-              <li key={index}>
-                <strong>{s.name}</strong> — {s.score} puntos ({s.wordsCount} palabras)
+              <li>
+                {s.empty ? (
+                  <span className="empty-slot">vacante</span>
+                ) : (
+                  <>
+                    <strong>{s.name}</strong> — {s.score} puntos ({s.wordsCount} palabras)
+                  </>
+                )}
               </li>
             ))}
           </ol>
