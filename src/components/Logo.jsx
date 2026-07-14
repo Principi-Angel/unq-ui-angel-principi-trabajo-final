@@ -1,8 +1,8 @@
 import "../styles/components/Logo.css";
 
-const Logo = ({ justTitle = false }) => {
+const Logo = ({ justTitle = false, small = false }) => {
   return (
-    <div className="logo">
+    <div className={`logo ${small ? "logo-small" : ""}`}>
       {!justTitle && (
         <div className="logo-chain">
           <span className="link" />
