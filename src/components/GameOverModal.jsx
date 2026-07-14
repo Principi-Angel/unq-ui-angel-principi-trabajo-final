@@ -23,7 +23,7 @@ const GameOverModal = ({ score, wordsCount, onRestart, onSaveScore }) => {
         <ScoreBoard
            score={score}
            wordsCount={wordsCount}
-           final={true}
+           final
         />
         <div className="game-over-modal-record"> 
         {isHighScore(score) ? (
