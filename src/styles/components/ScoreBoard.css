@@ -1,34 +1,50 @@
-.score {
+.score-board {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
 
-  gap: 0.5rem;
-  padding: 1rem 1.5rem;
+  gap: 0.6rem;
+  padding: 1.2rem 1.8rem;
   margin: 1rem auto;
 
   background: var(--panel-bg);
-  border-radius: var(--radius-md);
-  box-shadow: var(--shadow-sm);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-md);
 
+  font-family: "Economica", sans-serif;
   font-size: 1.2rem;
   font-weight: bold;
   color: #333;
+  transition: transform 0.25s ease-in-out;
 }
 
-.score p {
+.score-board:hover {
+  transform: scale(1.03);
+}
+
+.score-board p {
   margin: 0;
   text-shadow: 1px 1px 2px rgba(0,0,0,.08);
 }
 
-.score p:first-child {
-  font-size: 1.4rem;
-  color: var(--primary); 
+.score-board p:first-child {
+  font-size: 1.6rem;
+  color: var(--primary);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  animation: pulseScore 1.5s infinite;
 }
 
-.score p:last-child {
+.score-board p:last-child {
   font-size: 1.1rem;
   font-weight: normal;
   color: #555;
 }
+
+@keyframes pulseScore {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.05); color: var(--primary-light); }
+  100% { transform: scale(1); }
+}
+
