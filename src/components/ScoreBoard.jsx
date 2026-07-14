@@ -2,7 +2,7 @@ import "../styles/components/ScoreBoard.css";
 
 const ScoreBoard = ({ score, wordsCount, final = false }) => {
   return (
-    <div className="score">
+    <div className="score-board">
       <p>{final ? "Puntaje final: " : "Puntaje: "}{score}</p>
       {wordsCount !== undefined && <p>Cantidad de palabras: {wordsCount}</p>}
     </div>
