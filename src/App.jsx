@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 import { initScores } from "./services/scoreService";
-import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import GameBoard from "./components/GameBoard";
 import LeaderBoard from "./components/LeaderBoard";
 import Menu from "./components/Menu";
