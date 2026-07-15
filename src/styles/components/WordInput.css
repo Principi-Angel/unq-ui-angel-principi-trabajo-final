@@ -31,7 +31,8 @@ input[type="text"]{
     max-width: 320px;
     padding:.75rem 1rem;
     transition:border-color .2s, box-shadow .2s;
-    font-size: var(--text-xl);  
+    font-size: var(--text-xl); 
+    font-family: var(--font-input); 
 }
 
 @media (max-width: 480px) {

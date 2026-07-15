@@ -5,7 +5,8 @@ export function useGame() {
     const [score, setScore] = useState(0);
     const [timeLeft, setTimeLeft] = useState(null);
     const [gameOver, setGameOver] = useState(false);
-
+    const [round, setRound] = useState(0);
+    
     function addWord(word) {
         setChain(prev => [...prev, word]);
         setScore(prev => prev + word.original.length);
@@ -17,6 +18,7 @@ export function useGame() {
         setScore(0);
         setTimeLeft(null);
         setGameOver(false);
+        setRound(prev => prev + 1);
     }
 
     function endGame() {
@@ -35,6 +37,7 @@ export function useGame() {
         gameOver,
         addWord,
         resetGame,
-        endGame
+        endGame,
+        round 
     };
 }

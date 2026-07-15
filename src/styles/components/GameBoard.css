@@ -4,6 +4,8 @@
     gap:var(--spacing-xl);
     padding:var(--spacing-lg);
     background:var(--panel-bg);
+    height: 100vh;
+    overflow: hidden;
 }
 
 .game-layout{
@@ -47,7 +49,7 @@
 
 .game-chain{
     height:100%;
-    min-height:450px;
+    min-height: 0;
 }
 
 .modal-overlay {
@@ -84,9 +86,18 @@
 
 @media (max-width: 480px) {
   .game-board {
-    padding: var(--spacing-md);
+    height: auto;
+    min-height: 100vh;
+    overflow: visible;
   }
+
   .game-chain {
-    min-height: 300px;
+    min-height: 320px;  
+  }
+}
+
+@media (max-width: 480px) {
+  .game-board {
+    padding: var(--spacing-md);
   }
 }

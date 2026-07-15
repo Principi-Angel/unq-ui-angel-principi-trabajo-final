@@ -13,11 +13,11 @@
 
   
   /* Tipografías */
-  --font-logo: "Michroma", sans-serif;        /* Logo and branding */
-  --font-ui: "Economica", sans-serif;         /* seccions, buttons, leaderboard */
-  --font-timer: "Orbitron", sans-serif;       /* Timer */
-  --font-input: "Inter", sans-serif;          /* Input */
-  --font-input-alt: "Roboto Mono", monospace; /* Input */
+  --font-title: "Michroma", sans-serif;      /* Logo and branding */
+  --font-ui: "Economica", sans-serif;        /* seccions, buttons, leaderboard */
+  --font-timer: "Orbitron", sans-serif;      /* Timer */
+  --font-input: "Roboto Mono", sans-serif;   /* Input */
+  --font-input-alt: "Inter", monospace;      /* Input alternative */
 
   /* Font sizes */
   --text-xs: clamp(0.8rem, 1.5vw, 0.9rem);
