@@ -16,7 +16,7 @@
     width:32px;
     height:32px;
     border-radius:50%;
-    border:5px solid var(--green-3);
+    border:5px solid var(--green-1);
     position:relative;
     box-shadow:0 0 12px rgba(67,214,67,.35);
 }
@@ -28,7 +28,7 @@
     top:50%;
     width:18px;
     height:5px;
-    background:var(--green-3);
+    background:var(--green-1);
     transform:translateY(-50%);
 }
 
@@ -69,7 +69,7 @@
 }
 
 .logo-word-accent {
-    color: var(--green-4);
+    color: var(--green-2);
 }
 
 .logo-title-only {

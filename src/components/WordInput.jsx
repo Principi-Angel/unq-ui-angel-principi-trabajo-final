@@ -40,7 +40,6 @@ const WordInput = ({ chain, addWord, isValidating, setIsValidating }) => {
       }
     };
 
-
     return (
         <form onSubmit={handleSubmit}>
           <input

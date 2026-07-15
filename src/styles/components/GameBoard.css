@@ -1,55 +1,55 @@
 .game-board{
-    display:grid;
-    grid-template-rows: auto 1fr;
-    gap:var(--spacing-xl);
-    padding:var(--spacing-lg);
-    background:var(--panel-bg);
-    height: 100vh;
-    overflow: hidden;
+  display:grid;
+  grid-template-rows: auto 1fr;
+  gap:var(--spacing-xl);
+  padding:var(--spacing-lg);
+  background:var(--panel-bg);
+  height: 100vh;
+  overflow: hidden;
 }
 
 .game-layout{
-    display:grid;
-    grid-template-columns:160px 1fr 220px;
-    align-items:start;
-    gap:var(--spacing-xl);
-    max-width:1300px;
-    width:100%;
-    margin:0 auto;
+  display:grid;
+  grid-template-columns:160px 1fr 220px;
+  align-items:start;
+  gap:var(--spacing-xl);
+  max-width:1300px;
+  width:100%;
+  margin:0 auto;
 }
 
 .game-center{
-    display:flex;
-    flex-direction:column;
-    align-items:center;
-    justify-content:flex-start;
-    padding-top:2rem;
-    gap:var(--spacing-lg);
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:flex-start;
+  padding-top:2rem;
+  gap:var(--spacing-lg);
 }
 
 .game-right{
-    display:flex;
-    justify-content:flex-end;
-    align-items:center;
-    height:100%;
+  display:flex;
+  justify-content:flex-end;
+  align-items:center;
+  height:100%;
 }
 
 .game-left{
-    display:flex;
-    align-items:flex-start;
-    justify-content:flex-start;
-    height:100%;
+  display:flex;
+  align-items:flex-start;
+  justify-content:flex-start;
+  height:100%;
 }
 
 .game-left .logo{
-    transform:scale(.65);
-    transform-origin:top left;
-    padding-left: var(--spacing-xl);
+  transform:scale(.65);
+  transform-origin:top left;
+  padding-left: var(--spacing-xl);
 }
 
 .game-chain{
-    height:100%;
-    min-height: 0;
+  height:100%;
+  min-height: 0;
 }
 
 .modal-overlay {

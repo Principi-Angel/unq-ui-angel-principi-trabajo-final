@@ -1,4 +1,3 @@
-// Manejo de puntajes en localStorage
 export const initScoresStorage = () => {
   if (!localStorage.getItem("scores")) {
     localStorage.setItem("scores", JSON.stringify([]));
