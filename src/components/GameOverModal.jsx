@@ -17,7 +17,6 @@ const GameOverModal = ({ score, wordsCount, onRestart, onSaveScore }) => {
   };
 
   return (
-    <div className="modal-overlay">
       <div className="game-over-modal">
         <h1 className="section-title">Fin de la partida</h1>
         <ScoreBoard
@@ -58,7 +57,6 @@ const GameOverModal = ({ score, wordsCount, onRestart, onSaveScore }) => {
             <button className="primary-button" onClick={() => navigate("/scores")}>RÉCORDS</button>
           </div>
       </div>
-    </div>
   );
 };
 

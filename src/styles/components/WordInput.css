@@ -27,10 +27,17 @@ input {
 }
 
 input[type="text"]{
-    width:320px;
+    width: 100%;
+    max-width: 320px;
     padding:.75rem 1rem;
     transition:border-color .2s, box-shadow .2s;
     font-size: var(--text-xl);  
+}
+
+@media (max-width: 480px) {
+  input[type="text"] {
+    font-size: var(--text-md);
+  }
 }
 
 input[type="text"]:focus{

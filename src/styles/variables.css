@@ -20,12 +20,12 @@
   --font-input-alt: "Roboto Mono", monospace; /* Input */
 
   /* Font sizes */
-  --text-xs: .9rem;
-  --text-sm: 1rem;
-  --text-md: 1.2rem;
-  --text-lg: 1.6rem;
-  --text-xl: 2rem;
-  --text-xxl: 3rem;
+  --text-xs: clamp(0.8rem, 1.5vw, 0.9rem);
+  --text-sm: clamp(0.9rem, 2vw, 1rem);
+  --text-md: clamp(1rem, 2.5vw, 1.2rem);
+  --text-lg: clamp(1.2rem, 3vw, 1.6rem);
+  --text-xl: clamp(1.4rem, 4vw, 2rem);
+  --text-xxl: clamp(1.8rem, 6vw, 3rem);
 
   /* greens - safe zone */
   --green-1: #4caf50;
