@@ -37,7 +37,6 @@
 }
 
 .timer-link{
-
     width:70px;
     height:70px;
     border-width:6px;
@@ -65,8 +64,23 @@
     max-width: 100%;
 }
 
-.logo-title span{
-    color:var(--green-4);
+.logo-word-primary {
+    color: var(--primary-light);
+}
+
+.logo-word-accent {
+    color: var(--green-4);
+}
+
+.logo-title-only {
+    text-decoration: none;
+}
+
+.logo-title-only .logo-word-primary,
+.logo-title-only .logo-word-accent {
+    text-decoration: none;
+    border-bottom: 3px solid currentColor;
+    padding-bottom: 1px;
 }
 
 .logo-small{

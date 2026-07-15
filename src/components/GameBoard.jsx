@@ -42,7 +42,9 @@ const GameBoard = () => {
             <div className="game-board">
                 <div className="game-layout">
                   <div className="game-left">
-                    <Link to="/"><Logo justTitle /></Link>
+                    <Link to="/" style={{ textDecoration: 'none' }}>
+                        <Logo justTitle />
+                    </Link>
                   </div>
                             
                   <div className="game-center">
