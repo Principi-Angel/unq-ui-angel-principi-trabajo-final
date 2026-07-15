@@ -1,5 +1,4 @@
 .game-board{
-    min-height:100vh;
     display:grid;
     grid-template-rows: auto 1fr;
     gap:var(--spacing-xl);
@@ -24,7 +23,6 @@
     justify-content:flex-start;
     padding-top:2rem;
     gap:var(--spacing-lg);
-    background:white;
 }
 
 .game-right{
