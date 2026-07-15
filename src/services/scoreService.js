@@ -25,7 +25,7 @@ export const getTopScores = () => {
 
   const emptySlots = Array.from(
     { length: LIMIT_SCORES - scores.length },
-    (_, i) => ({
+    () => ({
       name: null,
       score: null,
       wordsCount: null,

@@ -33,7 +33,7 @@ const WordInput = ({ chain, addWord, isValidating, setIsValidating }) => {
         addWord(result.word);
         setWord("");
         setError("");
-      } catch (error) {
+      } catch {
         setError("Error al validar la palabra. Intenta nuevamente.");
       } finally {
         setIsValidating(false);
