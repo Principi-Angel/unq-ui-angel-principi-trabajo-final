@@ -90,7 +90,6 @@ input,
   transform: scale(1.05);
 }
 
-
 /* COLORS ZONE */
 /* greens - safe zone */
 .green-1 { --color: var(--green-1); --shadow: rgba(130,220,130,.15); --text-shadow: rgba(0,0,0,.08); }
@@ -131,4 +130,14 @@ input,
     100%{
         transform: scale(1);
     }
+}
+
+@media (max-width: 360px) {
+  .game-layout {
+    grid-template-columns: 1fr;
+    row-gap: var(--spacing-lg);
+  }
+  .game-left, .game-right {
+    justify-content: center;
+  }
 }
