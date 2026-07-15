@@ -21,7 +21,7 @@ const navigate = useNavigate();
           <p>No hay puntajes guardados todavía.</p>
         ) : (
           <ol>
-            {scores.map((s, index) => (
+            {scores.map((s) => (
               <li>
                 {s.empty ? (
                   <span className="empty-slot">vacante</span>
