@@ -52,12 +52,11 @@ html, body {
     box-shadow:var(--shadow-md);
 }
 
-.timer,
 .score-board,
 .primary-button,
-input,
+.input,
 .chain li,
-.p {
+p {
     font-family: var(--font-ui);
 }
 
