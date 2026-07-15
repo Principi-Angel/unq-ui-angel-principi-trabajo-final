@@ -1,5 +1,4 @@
 import "../styles/components/Timer.css"
-import { ZONES } from "../helpers/zones";
 
 const Timer = ({ timeLeft, colorZone}) => {
   

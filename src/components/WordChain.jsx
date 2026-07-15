@@ -1,5 +1,4 @@
 import "../styles/components/WordChain.css"
-import { ZONES } from "../helpers/zones";
 
 const WordChain = ({ chain, colorZone, className = "" }) => {
   return (
