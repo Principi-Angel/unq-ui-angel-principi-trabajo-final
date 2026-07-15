@@ -37,7 +37,8 @@ El proyecto está desarollado en JavaScript y está creado con React y consume u
 4. Disponible en:
     ```bash
     (http://localhost:5173)
-
+    ```
+    o
     [text](http://localhost:5173)
 
 ## ®️ Autor
