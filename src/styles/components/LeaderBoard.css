@@ -30,6 +30,12 @@
   margin-bottom: var(--spacing-sm);
 }
 
+.leader-board-play-button {
+  font-size: 1.3rem;
+  padding: 1rem 2.5rem;
+  margin-top: var(--spacing-md);
+}
+
 .logo-side{
     display:flex;
     justify-content:center;

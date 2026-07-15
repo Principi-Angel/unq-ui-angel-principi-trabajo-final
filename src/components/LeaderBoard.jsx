@@ -34,7 +34,7 @@ const navigate = useNavigate();
             ))}
           </ol>
         )}
-        <button className="primary-button" onClick={() => navigate("/game")}>JUGAR</button>
+        <button className="primary-button leader-board-play-button" onClick={() => navigate("/game")}>JUGAR</button>
       </div>
       
       <div className="logo-side">
