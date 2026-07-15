@@ -37,7 +37,6 @@ const GameBoard = () => {
     };
 
     const colorZone = getZone(timeLeft);
-
    
     return (
             <div className="game-board">

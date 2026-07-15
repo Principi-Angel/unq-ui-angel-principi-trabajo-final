@@ -5,7 +5,8 @@ import "../styles/components/LeaderBoard.css";
 
 const Leaderboard = () => {
   const scores = getTopScores(); 
-const navigate = useNavigate();
+  const navigate = useNavigate();
+  
   return (
     <div className="leader-board">
 

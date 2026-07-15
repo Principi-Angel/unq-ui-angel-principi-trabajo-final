@@ -22,17 +22,17 @@ form {
 }
 
 input {
-    border-radius:var(--radius-lg);
-    box-shadow:var(--shadow-md);
+  border-radius:var(--radius-lg);
+  box-shadow:var(--shadow-md);
 }
 
 input[type="text"]{
-    width: 100%;
-    max-width: 320px;
-    padding:.75rem 1rem;
-    transition:border-color .2s, box-shadow .2s;
-    font-size: var(--text-xl); 
-    font-family: var(--font-input); 
+  width: 100%;
+  max-width: 320px;
+  padding:.75rem 1rem;
+  transition:border-color .2s, box-shadow .2s;
+  font-size: var(--text-xl); 
+  font-family: var(--font-input); 
 }
 
 @media (max-width: 480px) {
@@ -42,9 +42,9 @@ input[type="text"]{
 }
 
 input[type="text"]:focus{
-    outline:none;
-    border-color:var(--primary-light);
-    box-shadow:0 0 8px rgba(122,0,204,.18);
+  outline:none;
+  border-color:var(--primary-light);
+  box-shadow:0 0 8px rgba(122,0,204,.18);
 }
 
 input[type="text"]:disabled {
