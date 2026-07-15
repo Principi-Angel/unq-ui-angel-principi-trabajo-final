@@ -39,8 +39,9 @@ const GameOverModal = ({ score, wordsCount, onRestart, onSaveScore }) => {
                   setPlayerName(e.target.value);
                 }
               }}
+              onKeyDown={handleSave}
             />
-            <button className="primary-button" onClick={handleSave}>GUARDAR PUNTAJE</button>
+            <button className="primary-button"onClick={handleSave}>GUARDAR PUNTAJE</button>
           </>
         ) : (
           <p className="no-highscore">
