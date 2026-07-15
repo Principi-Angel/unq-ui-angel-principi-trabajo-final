@@ -21,7 +21,8 @@ const GameBoard = () => {
         gameOver,
         addWord,
         resetGame,
-        endGame
+        endGame,
+        round 
     } = useGame();
     const [isValidating, setIsValidating] = useState(false);
 
@@ -50,6 +51,7 @@ const GameBoard = () => {
                   <div className="game-center">
                       <Timer timeLeft={timeLeft} colorZone={colorZone} />
                       <WordInput
+                        key={round}
                         chain={chain}
                         addWord={addWord}
                         isValidating={isValidating}
