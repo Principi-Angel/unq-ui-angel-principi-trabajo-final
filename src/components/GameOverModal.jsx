@@ -7,7 +7,7 @@ import "../styles/components/GameOverModal.css";
 const GameOverModal = ({ score, wordsCount, onRestart, onSaveScore }) => {
   const [playerName, setPlayerName] = useState("");
   const navigate = useNavigate();
-  const MAX_CHARS_NAME_INPUT = 30;
+  const MAX_CHARS_NAME_INPUT = 10;
 
   const handleSave = () => {
     if (!playerName.trim()) return;
@@ -39,9 +39,13 @@ const GameOverModal = ({ score, wordsCount, onRestart, onSaveScore }) => {
                   setPlayerName(e.target.value);
                 }
               }}
-              onKeyDown={handleSave}
+              onKeyDown={(e) => {
+                if (e.key === "Enter") {
+                  handleSave();
+                }
+              }}
             />
-            <button className="primary-button"onClick={handleSave}>GUARDAR PUNTAJE</button>
+            <button className="primary-button" onClick={handleSave}>GUARDAR PUNTAJE</button>
           </>
         ) : (
           <p className="no-highscore">
