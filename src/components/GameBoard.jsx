@@ -37,20 +37,9 @@ const GameBoard = () => {
 
     const colorZone = getZone(timeLeft);
 
-    if (gameOver) {
-                return (
-                  <div className="game-over-screen">
-                   <GameOverModal 
-                      score={score} 
-                      wordsCount={chain.length} 
-                      onRestart={handleRestart} 
-                      onSaveScore={handleSaveScore}
-                    />
-                  </div>
-                );
-             }
-              return (
-              <div className="game-board">
+   
+    return (
+            <div className="game-board">
                 <div className="game-layout">
                   <div className="game-left">
                     <Link to="/"><Logo justTitle /></Link>
@@ -68,10 +57,22 @@ const GameBoard = () => {
                   <div className="game-right">
                     <ScoreBoard score={score} wordsCount={chain.length} />
                   </div>
-                </div>
-                <WordChain className="game-chain" chain={chain} colorZone={colorZone} /> 
               </div>
-          );
+                <WordChain className="game-chain" chain={chain} colorZone={colorZone} />
+
+              {gameOver && (
+                  <div className="modal-overlay">
+                    <GameOverModal
+                      score={score}
+                      wordsCount={chain.length}
+                      onRestart={handleRestart}
+                      onSaveScore={handleSaveScore}
+                    />
+                  </div>
+                )}
+            </div>        
+          ); 
+          
 };
 
 export default GameBoard;
