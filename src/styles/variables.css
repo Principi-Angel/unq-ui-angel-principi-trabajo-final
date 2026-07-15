@@ -13,7 +13,7 @@
 
   
   /* Tipografías */
-  --font-logo: "Michroma", sans-serif;        /* Logo and branding */
+  --font-title: "Michroma", sans-serif;        /* Logo and branding */
   --font-ui: "Economica", sans-serif;         /* seccions, buttons, leaderboard */
   --font-timer: "Orbitron", sans-serif;       /* Timer */
   --font-input: "Inter", sans-serif;          /* Input */
