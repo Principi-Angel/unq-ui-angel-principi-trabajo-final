@@ -4,12 +4,12 @@ Este proyecto contiene a la aplicación web del juego, Trabajo Final Integrador 
 El proyecto está desarollado en JavaScript y está creado con React y consume una API REST externa proporcionada por la cátedra, que verfica si cada palabra ingresada existe en el diccionario español. Además, utiliza axiosx, vite.
 
 
-## ![Alt]([text](https://img.icons8.com/?size=100&id=LlgB5a8aAr0G&format=png&color=000000)) Características
+## ![Alt](https://img.icons8.com/?size=100&id=LlgB5a8aAr0G&format=png&color=000000) Características
 - Validación de palabras con API externa.
 - Puntaje acumulado por letras.
 - Temporizador de 15 segundos por turno.
-- Leaderboard local con los mejores puntajes.
-- Interfaz intuitiva y responsive.
+- Leaderboard local con los mejores pntajes.
+- Interfaz intuitiva y responsive.🛠️
 - Nota: por cuestiones de simplicidad, todas las palabras se normalizan. Esto significa que las variantes con mayúsculas,   minúsculas o acentos diacríticos (ej: "árbol", "Árbol", "arbol", "ärbol") se consideran una única palabra.
 
 ## ![Alt]([text](https://iconos8.es/icon/20544/tools)) Tecnologías
