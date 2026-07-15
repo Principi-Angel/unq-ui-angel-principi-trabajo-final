@@ -69,12 +69,15 @@
     grid-template-columns: 1fr;
     row-gap: var(--spacing-lg);
   }
+
   .game-left, .game-right {
     justify-content: center;
     height: auto;
   }
-  .game-left .logo {
-    transform: none;
+
+  .game-left .logo{
+    transform: scale(0.55);
+    transform-origin: top center;
     padding-left: 0;
   }
 }
